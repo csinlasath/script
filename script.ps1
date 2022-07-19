@@ -16,8 +16,8 @@ Invoke-Expression((New-Object System.Net.WebClient).DownloadString('https://comm
 Start-Sleep 60
 
 Set-Location -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion"
-New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion" -Name "ProgramFilesDir" -Value "C:\sw-dir\programs" -PropertyType String -Force
-New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion" -Name "ProgramFilesDir (x86)" -Value "C:\sw-dir\programs" -PropertyType String -Force
+New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion" -Name "ProgramFilesDir" -Value $PROGRAMS_DIR -PropertyType String -Force
+New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion" -Name "ProgramFilesDir (x86)" -Value $PROGRAMS_DIR -PropertyType String -Force
 Start-Sleep 10
 
 function Add-AppToPath {
