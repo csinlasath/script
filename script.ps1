@@ -60,8 +60,6 @@ Add-AppToPath -APP_DIR "temurin" -SUB_DIR "\bin"
 choco install mariadb --params="/INSTALLDIR=$PROGRAMS_DIR\MariaDB 10.9\ /quiet" -y
 Add-AppToPath -APP_DIR "MariaDB 10.9" -SUB_DIR "\bin"
 
-choco install googlechrome --params="/INSTALLDIR=$PROGRAMS_DIR\chrome\ /quiet" -y
-
 choco install postman -y --params="/INSTALLDIR=$PROGRAMS_DIR\postman\ /quiet" -y
 
 # Putty Is inside chocoportable/lib/putty
